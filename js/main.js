@@ -12,7 +12,7 @@ $(function () {
 		$("#nav-"+dest).addClass("active");
 	}
 
-	changeMenu("home");
+	// changeMenu("home");
 	
 	$("#nav-home").click(function() {
 		changeMenu('home');
