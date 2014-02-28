@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>SarahMakesMaps.com</title>
+  <meta name="description" content="Sarah makes maps with GIS.">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+  <!--[if lt IE 7]>
+  <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li id="nav-home" class="active"><a href="index.html">Sarah Makes Maps</a></li>
+          <li id="nav-about"><a href="#about">About</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right"><!-- THIS IS THE LIST OF NAVBAR PAGES -->
+          <li><a href="index.html">Home</a></li><!-- The class active indicates the current page (highlighted) -->
+          <li><a href="NYC.html">NYC</a></li><!-- this is a menu item (they're in order top to bottom - this is second) -->
+          <li class="active"><a href="Animations.html">Animations</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+        </ul><!-- THIS IS THE END OF THE LIST OF NAVBAR ELEMENTS -->
+      </div><!--/.navbar-collapse -->
+    </div>
+  </div>
+
+  <!-- The homepage content -->
+  <div class="container wrapper" id="home">
+
+
+    <!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+    <a name="UWSStreetDamage"></a>
+    <div class="panel">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+          <a href="img/UWS.gif"><img src="img/UWS.gif" width="80%" alt="UWS Street Damage"></a>
+        </div>
+        <div class="col-md-5">
+          <div class="well">
+            <h3>Damage Done to UM Streets in 1 Year</h3>
+            <p>
+             All Upper Manhattan reported street complaints in 2012 every 19 days. Data from <a href="http://www.nycopendata.socrata.com">NYC Open Data</a> 2012 311 complaints to the Department of Transportation. See <a href="img/UWS_SLOW.gif">here</a> for slower.
+           </p>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- THIS IS THE END OF THE TEMPLATE -->
+
+   <!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+   <a name="LMStreetDamage"></a>
+   <div class="panel">
+     <div class="row">
+      <div class="col-md-5 col-md-offset-1">
+        <a href="img/FastComplaints.gif"><img src="img/FastComplaints.gif" width="80%" alt="LM Street Damage"></a>
+      </div>
+      <div class="col-md-5">
+        <div class="well">
+          <h3>Damage Done to LM Streets in 1 Year</h3>
+          <p>
+           All Lower Manhattan reported street complaints in 2012 every 19 days. Data from <a href="http://www.nycopendata.socrata.com">NYC Open Data</a> 2012 311 complaints to the Department of Transportation. See <a href="img/Complaints_SLOW.gif">here</a> for slower.
+         </p>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- THIS IS THE END OF THE TEMPLATE -->
+
+
+ <!-- CONTENT GOES BEFORE THIS -->
+
+ <hr>
+
+ <footer>
+  <p>&copy; Sarah Michael Levine</p>
+</footer>
+
+</div> <!-- /homepage -->
+
+
+<!-- the about page -->
+<div class="container hidden" id="about">
+  <!-- The about page content -->
+  <div class="container" id="about-panel">
+    <h1>Sarah Levine</h1>
+    <p>Sarah makes maps in GIS. Senior at Barnard College, majors in Political Science and Urban Studies, specialization in American History.<br>
+      Interests: cartography, public health, blogging, public speaking, foreign affairs, web design, lego, sewing, human rights, statistics, urban infrastructure. 
+    </p>
+    <p><b>Contact</b><br><a href="https://twitter.com/sarahmichael625">@sarahmichael625</a><br><a href="mailto:sml2198@columbia.edu">sml2198@columbia.edu</a><br><a href="http://www.linkedin.com/pub/sarah-levine/88/820/31">LinkedIn/SarahLevine</a><br><a href="https://www.facebook.com/sarah.m.levine">FB/sarah.m.levine</a><br><a href="https://timerepublik.com/users/sarah-levine-a8c76a178">TimeRepublic/SarahLevine</a>
+    </p>
+  </div>
+</div> <!-- /aboutpage -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48511523-1', 'sarahmakesmaps.com');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>SarahMakesMaps.com</title>
+  <meta name="description" content="Sarah makes maps with GIS.">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+            <![endif]-->
+            <div class="navbar navbar-inverse navbar-fixed-top">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                    <li id="nav-home" class="active"><a href="index.html">Sarah Makes Maps</a></li>
+                    <li id="nav-about"><a href="#about">About</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right"><!-- THIS IS THE LIST OF NAVBAR PAGES -->
+                    <li><a href="index.html">Home</a></li><!-- The class active indicates the current page (highlighted) -->
+                    <li class="active"><a href="NYC.html">NYC</a></li><!-- this is a menu item (they're in order top to bottom - this is second) -->
+                    <li><a href="Animations.html">Animations</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                  </ul><!-- THIS IS THE END OF THE LIST OF NAVBAR ELEMENTS -->
+                </div><!--/.navbar-collapse -->
+              </div>
+            </div>
+
+            <!-- The homepage content -->
+            <div class="container wrapper" id="home">
+
+<!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+<a name="NumStories"></a><div class="panel">
+<div class="row">
+  <div class="col-md-5 col-md-offset-1">
+    <a href="img/Pluto_NumFloor.jpg"><img src="img/Pluto_NumFloor.jpg" width="80%" alt="Floor Numbers"></a>
+  </div>
+  <div class="col-md-5">
+    <div class="well">
+      <h3>Number of Stories</h3>
+      <p>Number of stories in Manhattan buildings. From 2014 <a href="http://www.nyc.gov/html/dcp/html/bytes/dwn_pluto_mappluto.shtml#mappluto">MapPluto</a> tax information. 
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- THIS IS THE END OF THE TEMPLATE -->
+
+<!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+<a name="YearBuilt"></a><div class="panel">
+<div class="row">
+  <div class="col-md-5 col-md-offset-1">
+    <a href="img/Pluto_YearBuilt.jpg"><img src="img/Pluto_YearBuilt.jpg" width="80%" alt="Year Built"></a>
+  </div>
+  <div class="col-md-5">
+    <div class="well">
+      <h3>NYC Year Built</h3>
+      <p>Manhattan buildings, year built. From 2014 <a href="http://www.nyc.gov/html/dcp/html/bytes/dwn_pluto_mappluto.shtml#mappluto">MapPluto</a> tax information. 
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- THIS IS THE END OF THE TEMPLATE -->
+
+<!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+<a name="BldgArea"></a><div class="panel">
+<div class="row">
+  <div class="col-md-5 col-md-offset-1">
+    <a href="img/Pluto_BldgArea.jpg"><img src="img/Pluto_BldgArea.jpg" width="80%" alt="Bldg Area"></a>
+  </div>
+  <div class="col-md-5">
+    <div class="well">
+      <h3>NYC Building Area</h3>
+      <p>Manhattan buildings, sq ft building area. From 2014 <a href="http://www.nyc.gov/html/dcp/html/bytes/dwn_pluto_mappluto.shtml#mappluto">MapPluto</a> tax information. 
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- THIS IS THE END OF THE TEMPLATE -->
+
+       <!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+       <a name="CityOwnedProperty"></a><div class="panel">
+       <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+          <a href="img/COP.jpg"><img src="img/COP.jpg" width="80%" alt="City-Owned Property"></a>
+        </div>
+        <div class="col-md-5">
+          <div class="well">
+            <h3>What NYC Owns in NYC</h3>
+            <p>
+             City-owned and leased property in NYC. Methods: 
+             <br>(1) Get <a href="https://data.cityofnewyork.us/City-Government/City-owned-and-Leased-Property/4e2n-s75z">City-owned and Leased Property (COP)</a> list. 
+             <br>(2) Get Manhattan <a href="http://www.nyc.gov/html/dcp/html/bytes/dwn_pluto_mappluto.shtml#mappluto">MapPLUTO parcel info (MNMapPLUTO)</a>. 
+             <br>(3) Add "Borough_1" field to MNMapPLUTO and use field calculator to make "Borough_1"="1" where "Borough"="MN" to make sure the borough identifier is common - 1 for MN - among the COP table and MapPLUTO layer. 
+             <br>(4) The parcels and COP table can be joined by their BBL (Borough, Block, Lot) numbers but unfortunately the BBL# is stored as three separate attributes, so use "Make Query Layer" tool to join the fields by their three respective attributes, using the SQL expression: ("COP.borough"="MapPLUTO.borough" AND "COP.block"="MapPLUTO.block" AND "COP.lot"="MapPLUTO.lot"). 
+             <br>(5) Import new query layer into filegeodatabase.
+             <p><a href="mailto:sml2198@columbia.edu">Message</a> for final COP shapefile.
+           </p>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- THIS IS THE END OF THE TEMPLATE -->
+
+          <!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+       <a name="CityOwnedPropertyDetail"></a><div class="panel">
+       <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+          <a href="img/COP1.jpg"><img src="img/COP1.jpg" width="80%" alt="City-Owned Property Inset"></a>
+        </div>
+        <div class="col-md-5">
+          <div class="well">
+            <h3>What NYC Owns in NYC</h3>
+            <p>
+             City-owned and leased property in NYC. Methods: 
+             <br>(1) Get <a href="https://data.cityofnewyork.us/City-Government/City-owned-and-Leased-Property/4e2n-s75z">City-owned and Leased Property (COP)</a> list. 
+             <br>(2) Get Manhattan <a href="http://www.nyc.gov/html/dcp/html/bytes/dwn_pluto_mappluto.shtml#mappluto">MapPLUTO parcel info (MNMapPLUTO)</a>. 
+             <br>(3) Add "Borough_1" field to MNMapPLUTO and use field calculator to make "Borough_1"="1" where "Borough"="MN" to make sure the borough identifier is common - 1 for MN - among the COP table and MapPLUTO layer. 
+             <br>(4) The parcels and COP table can be joined by their BBL (Borough, Block, Lot) numbers but unfortunately the BBL# is stored as three separate attributes, so use "Make Query Layer" tool to join the fields by their three respective attributes, using the SQL expression: ("COP.borough"="MapPLUTO.borough" AND "COP.block"="MapPLUTO.block" AND "COP.lot"="MapPLUTO.lot"). 
+             <br>(5) Import new query layer into filegeodatabase.
+             <p><a href="mailto:sml2198@columbia.edu">Message</a> for final COP shapefile.
+           </p>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- THIS IS THE END OF THE TEMPLATE -->
+
+          <!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+       <a name="TreesAndPotholes"></a><div class="panel">
+       <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+          <a href="img/TreesAndPotholes2.jpg"><img src="img/TreesAndPotholes2.jpg" width="80%" alt="Trees and Potholes"></a>
+        </div>
+        <div class="col-md-5">
+          <div class="well">
+            <h3>Manhattan Trees & Potholes</h3>
+            <p>
+             All trees and potholes in Manhattan in 2012. Data from <a href="http://www.nycopendata.socrata.com">NYC Open Data</a> street tree census and 2012 311 complaints to the Department of Transportation. For <a href="https://twitter.com/melbehroo">Melika</a>.
+           </p>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- THIS IS THE END OF THE TEMPLATE -->
+
+<!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+<div class="panel">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-1">
+      <a href="img/NYC_PrettyStreetTypes.jpg"><img src="img/NYC_PrettyStreetTypes.jpg" width="80%" alt="StreetTypes"></a>
+    </div>
+    <div class="col-md-5">
+      <div class="well">
+        <h3>NYC Street Types</h3>
+        <p>
+          NYC street centerlines by street type. Data from <a href="https://nycopendata.socrata.com/">NYC Open Data</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- THIS IS THE END OF THE TEMPLATE -->
+
+<!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+<a name="SarahandWill"></a><div class="panel">
+<div class="row">
+  <div class="col-md-5 col-md-offset-1">
+    <a href="img/SarahAndWillSmall.jpg"><img src="img/SarahAndWillSmall.jpg" width="80%" alt="Sarah and Will"></a>
+  </div>
+  <div class="col-md-5">
+    <div class="well">
+      <h3>NYC: Sarah and Will</h3>
+      <p>
+       Sarah and <a href="http://www.falk-wallace.com/">Will</a> play in NYC. Locations spring 2012-fall 2013. 
+     </p>
+   </div>
+ </div>
+</div>
+</div>
+<!-- THIS IS THE END OF THE TEMPLATE -->
+
+<!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+<a name="Elevation"></a><div class="panel">
+<div class="row">
+  <div class="col-md-5 col-md-offset-1">
+    <a href="img/nyc_elevation1.jpg"><img src="img/nyc_elevation1.jpg" width="80%" alt="Elevation"></a>
+  </div>
+  <div class="col-md-5">
+    <div class="well">
+      <h3>NYC Elevation</h3>
+      <p>
+        NYC elevation raster. Data from <a href="https://nycopendata.socrata.com/">NYC Open Data</a>.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- THIS IS THE END OF THE TEMPLATE -->
+
+<!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+<a name="WifiLocations"></a><div class="panel">
+<div class="row">
+  <div class="col-md-5 col-md-offset-1">
+    <a href="img/nyc_wifi.jpg"><img src="img/nyc_wifi.jpg" width="80%" alt="Wifi Locations"></a>
+  </div>
+  <div class="col-md-5">
+    <div class="well">
+      <h3>NYC Wifi</h3>
+      <p>
+        NYC wifi points. Data from <a href="https://nycopendata.socrata.com/">NYC Open Data</a>.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- THIS IS THE END OF THE TEMPLATE -->
+
+<!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+<a name="WifiLocations2"></a><div class="panel">
+<div class="row">
+  <div class="col-md-5 col-md-offset-1">
+    <a href="img/nyc_wifi2.jpg"><img src="img/nyc_wifi2.jpg" width="80%" alt="Wifi Heatmap"></a>
+  </div>
+  <div class="col-md-5">
+    <div class="well">
+      <h3>NYC Wifi</h3>
+      <p>
+        NYC wifi heat map. Data from <a href="https://nycopendata.socrata.com/">NYC Open Data</a>.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- THIS IS THE END OF THE TEMPLATE -->
+
+<!-- THIS IS THE MAP DISPLAY TEMPLATE -->
+<a name="AADTraffic"></a><div class="panel">
+<div class="row">
+  <div class="col-md-5 col-md-offset-1">
+    <a href="img/AADT_Traffic.jpg"><img src="img/AADT_Traffic.jpg" width="80%" alt="AADT Traffic"></a>
+  </div>
+  <div class="col-md-5">
+    <div class="well">
+      <h3>NYC Traffic Counts</h3>
+      <p>AADT Count: Average Annual Daily Traffic count of total volume of cars on any given road over one year, divided by 365 days. Data from NY State Department of Transportation <a href="https://www.dot.ny.gov/tdv">Traffic Data Viewer</a>.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- THIS IS THE END OF THE TEMPLATE -->
+
+
+<!-- CONTENT GOES BEFORE THIS -->
+
+<hr>
+
+<footer>
+  <p>&copy; Sarah Michael Levine</p>
+</footer>
+
+</div> <!-- /homepage -->
+
+
+<!-- the about page -->
+<div class="container hidden" id="about">
+  <!-- The about page content -->
+  <div class="container" id="about-panel">
+    <h1>Sarah Levine</h1>
+    <p>Sarah makes maps in GIS. Senior at Barnard College, majors in Political Science and Urban Studies, specialization in American History.<br>
+      Interests: cartography, public health, blogging, public speaking, foreign affairs, web design, lego, sewing, human rights, statistics, urban infrastructure. </p>
+      <p><b>Contact</b><br><a href="https://twitter.com/sarahmichael625">@sarahmichael625</a><br><a href="mailto:sml2198@columbia.edu">sml2198@columbia.edu</a><br><a href="http://www.linkedin.com/pub/sarah-levine/88/820/31">LinkedIn/SarahLevine</a><br><a href="https://www.facebook.com/sarah.m.levine">FB/sarah.m.levine</a><br><a href="https://timerepublik.com/users/sarah-levine-a8c76a178">TimeRepublic/SarahLevine</a></p>
+    </div>
+  </div> <!-- /aboutpage -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+  <script src="js/vendor/bootstrap.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-48511523-1', 'sarahmakesmaps.com');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
