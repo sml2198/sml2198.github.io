@@ -115,7 +115,7 @@
             <p>
              City-owned and leased property in NYC. Methods: 
              <br>(1) Get <a href="https://data.cityofnewyork.us/City-Government/City-owned-and-Leased-Property/4e2n-s75z">City-owned and Leased Property (COP)</a> list. 
-             <br>(2) Get Manhattan<a href="http://www.nyc.gov/html/dcp/html/bytes/dwn_pluto_mappluto.shtml#mappluto">MapPLUTO parcel info (MNMapPLUTO)</a>. 
+             <br>(2) Get Manhattan <a href="http://www.nyc.gov/html/dcp/html/bytes/dwn_pluto_mappluto.shtml#mappluto">MapPLUTO parcel info (MNMapPLUTO)</a>. 
              <br>(3) Add "Borough_1" field to MNMapPLUTO and use field calculator to make "Borough_1"="1" where "Borough"="MN" to make sure the borough identifier is common - 1 for MN - among the COP table and MapPLUTO layer. 
              <br>(4) The parcels and COP table can be joined by their BBL (Borough, Block, Lot) numbers but unfortunately the BBL# is stored as three separate attributes, so use "Make Query Layer" tool to join the fields by their three respective attributes, using the SQL expression: ("COP.borough"="MapPLUTO.borough" AND "COP.block"="MapPLUTO.block" AND "COP.lot"="MapPLUTO.lot"). 
              <br>(5) Import new query layer into filegeodatabase.
@@ -139,7 +139,7 @@
             <p>
              City-owned and leased property in NYC. Methods: 
              <br>(1) Get <a href="https://data.cityofnewyork.us/City-Government/City-owned-and-Leased-Property/4e2n-s75z">City-owned and Leased Property (COP)</a> list. 
-             <br>(2) Get Manhattan<a href="http://www.nyc.gov/html/dcp/html/bytes/dwn_pluto_mappluto.shtml#mappluto">MapPLUTO parcel info (MNMapPLUTO)</a>. 
+             <br>(2) Get Manhattan <a href="http://www.nyc.gov/html/dcp/html/bytes/dwn_pluto_mappluto.shtml#mappluto">MapPLUTO parcel info (MNMapPLUTO)</a>. 
              <br>(3) Add "Borough_1" field to MNMapPLUTO and use field calculator to make "Borough_1"="1" where "Borough"="MN" to make sure the borough identifier is common - 1 for MN - among the COP table and MapPLUTO layer. 
              <br>(4) The parcels and COP table can be joined by their BBL (Borough, Block, Lot) numbers but unfortunately the BBL# is stored as three separate attributes, so use "Make Query Layer" tool to join the fields by their three respective attributes, using the SQL expression: ("COP.borough"="MapPLUTO.borough" AND "COP.block"="MapPLUTO.block" AND "COP.lot"="MapPLUTO.lot"). 
              <br>(5) Import new query layer into filegeodatabase.
