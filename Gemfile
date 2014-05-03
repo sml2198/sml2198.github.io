@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -32,6 +34,7 @@ end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -41,3 +44,9 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use Bleeding-Edge Mongoid for mongodb
+gem 'mongoid', git:'https://github.com/mongoid/mongoid.git'
+
+# Heroku asset compilation
+gem 'rails_12factor', group: :production
